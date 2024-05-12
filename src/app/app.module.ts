@@ -5,6 +5,8 @@ import { AddassociateComponent } from './component/addassociate/addassociate.com
 import { MaterialModule } from './Material.Module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterOutlet } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,13 @@ import { BrowserModule } from '@angular/platform-browser';
     AssociatelistingComponent,
     AddassociateComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, MaterialModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MaterialModule,
+    HttpClientModule,
+    RouterOutlet,
+  ],
   providers: [AppComponent],
   bootstrap: [AppComponent],
 })
